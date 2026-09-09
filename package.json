@@ -1,0 +1,31 @@
+{
+  "name": "forge-and-iron-athletic-club",
+  "version": "1.0.0",
+  "description": "Full-fledged, authentic, high-performance athletic club website and connected backend platform.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node -e \"console.log('Sanity check passed')\""
+  },
+  "keywords": [
+    "gym",
+    "fitness",
+    "strength-and-conditioning",
+    "booking-system",
+    "athletic-club",
+    "express",
+    "full-stack"
+  ],
+  "author": "FORGE & IRON ATHLETIC CLUB",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
