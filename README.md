@@ -51,7 +51,7 @@ Or start the production server:
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:4000](http://localhost:4000) in your browser.
 
 ---
 
@@ -83,7 +83,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 docker build -t fitg-gym .
 
 # Run the container
-docker run -p 3000:3000 fitg-gym
+docker run -p 4000:4000 fitg-gym
 ```
 
 ### Option 2: Render
