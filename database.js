@@ -5,475 +5,454 @@ const DATA_FILE = path.join(__dirname, 'data', 'store.json');
 
 const INITIAL_DATA = {
   clubInfo: {
-    name: "FORGE & IRON ATHLETIC CLUB",
-    tagline: "High-Performance Strength, Olympic Lifting & Contrast Recovery",
-    address: "840 Industrial Parkway, Warehouse District, Bldg 4",
-    phone: "+1 (555) 840-3674",
-    email: "desk@forgeiron.club",
+    name: "FITG FITNESS STUDIO // COIMBATORE",
+    tagline: "Kovai's Premier Strength, Transformation & Cross-Training Hub",
+    branches: [
+      "Peelamedu (Avinashi Road - Main Branch)",
+      "RS Puram (DB Road)",
+      "Saravanampatti (Near Tidel Park / CHIL SEZ)"
+    ],
+    address: "42/1 Avinashi Road, Near Nava India Signal, Peelamedu, Coimbatore - 641004",
+    phone: "+91 98422 41008 / +91 (422) 257-4100",
+    email: "kovai@fitgfitness.in",
     operatingHours: {
-      weekdays: "05:00 - 22:00",
-      saturday: "06:30 - 20:00",
-      sunday: "08:00 - 18:00"
+      weekdays: "05:30 AM - 10:00 PM",
+      saturday: "05:30 AM - 09:30 PM",
+      sunday: "06:00 AM - 01:00 PM",
+      ladiesBatch: "10:00 AM - 11:30 AM (Exclusive Ladies Hours)"
     },
     currentOccupancy: {
-      athletesInside: 46,
-      maxCapacity: 65,
-      status: "Optimal Flow",
-      peakNote: "Peak evening sessions start at 17:30"
+      athletesInside: 38,
+      maxCapacity: 55,
+      status: "Smooth Flow",
+      peakNote: "Evening rush from Peelamedu colleges & IT folks begins at 06:30 PM"
     }
   },
   classes: [
     {
       id: "cls-01",
-      title: "DAWN PATROL S&C",
+      title: "EARLY BIRD STRENGTH & CONDITIONING",
       track: "Strength & Conditioning",
       category: "strength",
       day: "Monday",
       time: "06:00 AM - 07:00 AM",
-      trainer: "Marcus Vance",
-      trainerCert: "CSCS / Olympic Bobsled",
-      room: "Vault Platform A",
-      capacity: 16,
-      bookedCount: 12,
+      trainer: "Karthik Raja",
+      trainerCert: "K11 Master Trainer",
+      room: "Main Strength Floor",
+      capacity: 18,
+      bookedCount: 14,
       intensity: "High",
-      equipment: ["Eleiko Bars", "Rogue Racks", "Concept2"],
-      description: "Heavy barbell compound fundamentals followed by aerobic lactate threshold flushing. Build real capacity before the city wakes up."
+      equipment: ["Jerai Barbells", "Power Racks", "Dumbbells"],
+      description: "Compound barbell fundamentals, squats, and functional strength. Start your morning before the Avinashi Road traffic starts."
     },
     {
       id: "cls-02",
-      title: "ENGINE ROOM METCON",
-      track: "Metcon & Conditioning",
+      title: "HIIT FAT BURN & CARDIO CIRCUIT",
+      track: "Weight Loss & Cardio",
       category: "metcon",
       day: "Monday",
-      time: "07:30 AM - 08:30 AM",
-      trainer: "Devon Cole",
-      trainerCert: "Hyrox Pro / Golden Gloves",
-      room: "The Turf",
-      capacity: 18,
-      bookedCount: 14,
-      intensity: "Extreme",
-      equipment: ["Sleds", "SkiErg", "Kettlebells", "Dumbbells"],
-      description: "High-density functional intervals. Push heavy sleds, cycle kettlebells, and test your cardiovascular stamina on 50-meter turf."
+      time: "07:15 AM - 08:15 AM",
+      trainer: "Vigneshwaran 'Vicky'",
+      trainerCert: "ACSM Certified",
+      room: "Cardio & Turf Zone",
+      capacity: 20,
+      bookedCount: 16,
+      intensity: "High",
+      equipment: ["Battle Ropes", "Air Bikes", "Kettlebells"],
+      description: "High calorie-burn metabolic circuit designed for steady fat loss and cardiovascular stamina."
     },
     {
       id: "cls-03",
-      title: "OLYMPIC BARBELL LAB",
-      track: "Olympic Weightlifting",
-      category: "olympic",
+      title: "DEDICATED LADIES FITNESS BATCH",
+      track: "Women Fitness & Toning",
+      category: "women",
       day: "Monday",
-      time: "12:00 PM - 01:15 PM",
-      trainer: "Elena Rostova",
-      trainerCert: "USAW Senior International / DPT",
-      room: "Vault Platform B",
-      capacity: 10,
-      bookedCount: 8,
-      intensity: "Technical",
-      equipment: ["Calibrated Eleiko Plates", "Chalk Station", "Video Replay"],
-      description: "Precision snatch drills, clean & jerk positions, bar path kinematics, and drop-under speed. Strict technical feedback on every single rep."
+      time: "10:00 AM - 11:30 AM",
+      trainer: "Priya S.",
+      trainerCert: "Postpartum & PCOS Specialist",
+      room: "Full Studio Floor",
+      capacity: 15,
+      bookedCount: 11,
+      intensity: "Moderate",
+      equipment: ["Dumbbells", "Resistance Bands", "Core Mats"],
+      description: "Dedicated exclusive ladies batch with female certified coach. Posture, core strengthening, inch loss, and functional mobility."
     },
     {
       id: "cls-04",
       title: "HEAVY IRON & HYPERTROPHY",
-      track: "Strength & Conditioning",
+      track: "Bodybuilding & Muscle",
       category: "strength",
       day: "Monday",
       time: "05:30 PM - 06:45 PM",
-      trainer: "Marcus Vance",
-      trainerCert: "CSCS / Olympic Bobsled",
-      room: "Main Floor",
-      capacity: 14,
-      bookedCount: 11,
+      trainer: "Karthik Raja",
+      trainerCert: "K11 Master Trainer",
+      room: "Main Strength Floor",
+      capacity: 16,
+      bookedCount: 13,
       intensity: "High",
-      equipment: ["Barbells", "Cables", "Specialty Bars", "Benches"],
-      description: "Periodized posterior chain and upper-body mechanical tension work. Focus on maximum motor unit recruitment and structural integrity."
+      equipment: ["Cables", "Incline Benches", "Heavy Dumbbells up to 50kg"],
+      description: "Progressive overload chest, back, and arm hypertrophy splits with strict form guidance."
     },
     {
       id: "cls-05",
-      title: "BREATHWORK & COLD SANCTUARY",
-      track: "Thermal Recovery",
-      category: "recovery",
+      title: "CROSSFIT & BATTLE ROPE BOOTCAMP",
+      track: "Cross-Training",
+      category: "metcon",
       day: "Monday",
       time: "07:00 PM - 08:00 PM",
-      trainer: "Elena Rostova",
-      trainerCert: "USAW / DPT / Wim Hof Protocol",
-      room: "Recovery Lounge",
-      capacity: 12,
-      bookedCount: 7,
-      intensity: "Restorative",
-      equipment: ["38°F Chilled Plunge", "195°F Finnish Sauna", "Breathwork mats"],
-      description: "Guided down-regulation breathing, physiological sigh resets, and contrast exposure between 38°F ice baths and cedar dry heat."
+      trainer: "Vigneshwaran 'Vicky'",
+      trainerCert: "State Powerlifter",
+      room: "Turf Zone",
+      capacity: 18,
+      bookedCount: 15,
+      intensity: "Extreme",
+      equipment: ["Heavy Ropes", "Plyo Boxes", "Tire Flips", "Slam Balls"],
+      description: "Slam-style explosive functional workout with heavy battle ropes, box jumps, and tire flips to Kollywood bass tracks."
     },
     {
       id: "cls-06",
-      title: "HYROX ENGINE SIMULATION",
-      track: "Hyrox & Endurance",
-      category: "metcon",
+      title: "POWER YOGA & DEEP STRETCH",
+      track: "Mobility & Recovery",
+      category: "recovery",
       day: "Tuesday",
-      time: "06:30 AM - 07:45 AM",
-      trainer: "Devon Cole",
-      trainerCert: "Hyrox Pro / Golden Gloves",
-      room: "The Turf & Engine Bay",
+      time: "06:30 AM - 07:30 AM",
+      trainer: "Priya S.",
+      trainerCert: "Certified Yoga & Mobility Lead",
+      room: "Studio 2",
       capacity: 16,
-      bookedCount: 15,
-      intensity: "Extreme",
-      equipment: ["Concept2 RowErg", "Sled Push/Pull", "Wall Balls", "Sandbags"],
-      description: "Official Hyrox race simulation pacing. Dial in transition times, heart-rate recovery, and movement economy under high metabolic fatigue."
+      bookedCount: 8,
+      intensity: "Low",
+      equipment: ["Yoga Mats", "Foam Rollers", "Blocks"],
+      description: "Active spinal decompression, hamstring length, and breathing control to soothe desk fatigue."
     },
     {
       id: "cls-07",
-      title: "FUNCTIONAL MOBILITY & PRE-HAB",
-      track: "Mobility & Pre-hab",
-      category: "recovery",
-      day: "Tuesday",
-      time: "08:00 AM - 09:00 AM",
-      trainer: "Elena Rostova",
-      trainerCert: "Doctor of Physical Therapy",
-      room: "Studio 2",
-      capacity: 14,
-      bookedCount: 6,
-      intensity: "Low",
-      equipment: ["Resistance Bands", "Foam Rollers", "Lacrosse Balls"],
-      description: "Joint capsule mobilization, thoracic extension drills, hip decompression, and active end-range motor control for heavy lifters."
-    },
-    {
-      id: "cls-08",
-      title: "DEADLIFT & SQUAT PROTOCOL",
-      track: "Strength & Conditioning",
+      title: "CORE CRUSHER & ABS ACCELERATOR",
+      track: "Core & Conditioning",
       category: "strength",
       day: "Tuesday",
-      time: "05:00 PM - 06:30 PM",
-      trainer: "Marcus Vance",
-      trainerCert: "CSCS / Olympic Bobsled",
-      room: "Vault Platform A",
-      capacity: 12,
-      bookedCount: 10,
-      intensity: "High",
-      equipment: ["Competition Calibrated Plates", "Deadlift Jacks", "Power Racks"],
-      description: "Deadlift biomechanics, stance optimization, bracing against intra-abdominal pressure, and targeted supplemental lockout work."
-    },
-    {
-      id: "cls-09",
-      title: "BOXING CONDITIONING & PADS",
-      track: "Combat Conditioning",
-      category: "combat",
-      day: "Tuesday",
-      time: "06:45 PM - 07:45 PM",
-      trainer: "Devon Cole",
-      trainerCert: "Golden Gloves Finalist",
-      room: "Combat Ring",
+      time: "07:45 AM - 08:30 AM",
+      trainer: "Vigneshwaran 'Vicky'",
+      trainerCert: "ACSM Certified",
+      room: "Turf Zone",
       capacity: 16,
       bookedCount: 12,
       intensity: "High",
-      equipment: ["Leather Heavy Bags", "Speed Bags", "Focus Mitts"],
-      description: "Authentic ring craft, hip rotational torque, rhythm footwork drills, and 3-minute high-output rounds with pad holders."
+      equipment: ["Ab Rollers", "Hanging Leg Raise Bar", "Medicine Balls"],
+      description: "Targeted abdominal conditioning, oblique twists, and isometric core stabilization."
+    },
+    {
+      id: "cls-08",
+      title: "LADIES STRENGTH & INCH LOSS",
+      track: "Women Fitness & Toning",
+      category: "women",
+      day: "Tuesday",
+      time: "10:00 AM - 11:30 AM",
+      trainer: "Priya S.",
+      trainerCert: "Female Fitness Lead",
+      room: "Full Studio Floor",
+      capacity: 15,
+      bookedCount: 9,
+      intensity: "Moderate",
+      equipment: ["Light Barbells", "Kettlebells", "Glute Bands"],
+      description: "Glute strengthening, lower body conditioning, and heart-healthy circuits in a supportive environment."
+    },
+    {
+      id: "cls-09",
+      title: "LEG DAY DESTRUCTION",
+      track: "Strength & Bodybuilding",
+      category: "strength",
+      day: "Tuesday",
+      time: "05:30 PM - 06:45 PM",
+      trainer: "Karthik Raja",
+      trainerCert: "K11 Master Trainer",
+      room: "Main Strength Floor",
+      capacity: 14,
+      bookedCount: 12,
+      intensity: "Extreme",
+      equipment: ["Hack Squat", "Leg Press 45°", "Smith Machine"],
+      description: "Heavy quad, hamstring, and calf work. Quad sweeps and hamstring curls under strict tempo control."
     },
     {
       id: "cls-10",
-      title: "DAWN PATROL S&C",
+      title: "KICKBOXING & STRIKING CARDIO",
+      track: "Combat Conditioning",
+      category: "combat",
+      day: "Tuesday",
+      time: "07:00 PM - 08:00 PM",
+      trainer: "Vigneshwaran 'Vicky'",
+      trainerCert: "Combat Certified",
+      room: "Combat Pad Area",
+      capacity: 16,
+      bookedCount: 13,
+      intensity: "High",
+      equipment: ["Focus Pads", "Heavy Punching Bags", "Hand Wraps"],
+      description: "Basic boxing combos, knee strikes, kick defense, and sweat-drenching bag work."
+    },
+    {
+      id: "cls-11",
+      title: "EARLY BIRD STRENGTH & CONDITIONING",
       track: "Strength & Conditioning",
       category: "strength",
       day: "Wednesday",
       time: "06:00 AM - 07:00 AM",
-      trainer: "Marcus Vance",
-      trainerCert: "CSCS",
-      room: "Vault Platform A",
-      capacity: 16,
-      bookedCount: 13,
+      trainer: "Karthik Raja",
+      trainerCert: "K11 Master Trainer",
+      room: "Main Strength Floor",
+      capacity: 18,
+      bookedCount: 14,
       intensity: "High",
-      equipment: ["Barbells", "Plyo Boxes", "Concept2"],
-      description: "Overhead pressing power, explosive kettlebell transitions, and high-cadence anaerobic intervals."
-    },
-    {
-      id: "cls-11",
-      title: "KETTLEBELL MASTERY & CORE",
-      track: "Functional Fitness",
-      category: "metcon",
-      day: "Wednesday",
-      time: "12:00 PM - 01:00 PM",
-      trainer: "Devon Cole",
-      trainerCert: "SFG II Kettlebell Certified",
-      room: "The Turf",
-      capacity: 14,
-      bookedCount: 9,
-      intensity: "Medium",
-      equipment: ["Competition Kettlebells 12kg-48kg"],
-      description: "Hardstyle swings, Turkish get-ups, double kettlebell clean & jerks, and antirotational core strength."
+      equipment: ["Jerai Barbells", "Dumbbells"],
+      description: "Overhead military pressing, bent-over barbell rows, and functional stamina."
     },
     {
       id: "cls-12",
-      title: "CONTRAST PLUNGE & SAUNA",
-      track: "Thermal Recovery",
-      category: "recovery",
+      title: "TABATA STEP & FAT BURN",
+      track: "Weight Loss & Cardio",
+      category: "metcon",
       day: "Wednesday",
-      time: "07:30 PM - 08:30 PM",
-      trainer: "Elena Rostova",
-      trainerCert: "Doctor of Physical Therapy",
-      room: "Recovery Lounge",
-      capacity: 12,
-      bookedCount: 11,
-      intensity: "Restorative",
-      equipment: ["Cold Plunge", "Sauna", "Electrolyte Bar"],
-      description: "Vasoconstriction and vasodilation cycling to clear metabolic byproducts and support parasympathetic nervous recovery."
+      time: "07:30 AM - 08:30 AM",
+      trainer: "Priya S.",
+      trainerCert: "ACSM Certified",
+      room: "Cardio Floor",
+      capacity: 18,
+      bookedCount: 13,
+      intensity: "High",
+      equipment: ["Aerobic Steps", "Light Dumbbells"],
+      description: "20 seconds maximum effort, 10 seconds rest. Fast-paced music and full body sweat."
     },
     {
       id: "cls-13",
-      title: "OLYMPIC PULLS & SQUATS",
-      track: "Olympic Weightlifting",
-      category: "olympic",
-      day: "Thursday",
-      time: "06:00 AM - 07:15 AM",
-      trainer: "Elena Rostova",
-      trainerCert: "USAW Senior Coach",
-      room: "Vault Platform B",
-      capacity: 10,
-      bookedCount: 9,
-      intensity: "Technical",
-      equipment: ["Eleiko Olympic Bars", "Wooden Squat Boxes"],
-      description: "High pulls from riser blocks, clean grip deadlifts, and paused front squats to develop leg drive."
+      title: "CHEST & BICEPS PUMP GRIND",
+      track: "Bodybuilding & Muscle",
+      category: "strength",
+      day: "Wednesday",
+      time: "05:30 PM - 06:45 PM",
+      trainer: "Karthik Raja",
+      trainerCert: "K11 Master Trainer",
+      room: "Main Strength Floor",
+      capacity: 16,
+      bookedCount: 14,
+      intensity: "High",
+      equipment: ["Flat & Incline Benches", "Cable Crossover"],
+      description: "The classic Wednesday evening chest and arm session with proper spotter support."
     },
     {
       id: "cls-14",
-      title: "FULL BODY GRIND METCON",
-      track: "Metcon & Conditioning",
-      category: "metcon",
-      day: "Thursday",
-      time: "05:30 PM - 06:30 PM",
-      trainer: "Marcus Vance",
-      trainerCert: "CSCS",
-      room: "The Turf",
-      capacity: 18,
-      bookedCount: 14,
-      intensity: "Extreme",
-      equipment: ["Assault Bikes", "Dumbbells", "Sleds"],
-      description: "Calorie sprints, dumbbell devils press, and continuous heavy farmer carries under fatigue."
+      title: "STEAM BATH & RECOVERY EVENING",
+      track: "Mobility & Recovery",
+      category: "recovery",
+      day: "Wednesday",
+      time: "07:30 PM - 08:30 PM",
+      trainer: "Staff Assisted",
+      trainerCert: "Wellness Staff",
+      room: "Steam Room & Shower Suite",
+      capacity: 12,
+      bookedCount: 10,
+      intensity: "Restorative",
+      equipment: ["Aromatic Eucalyptus Steam Room", "Hot Showers"],
+      description: "Detoxify tired muscles, open pores, and unwind after an intense week of lifting."
     },
     {
       id: "cls-15",
-      title: "TECHNICAL STRIKING & CLINCH",
-      track: "Combat Conditioning",
-      category: "combat",
-      day: "Thursday",
-      time: "06:45 PM - 08:00 PM",
-      trainer: "Devon Cole",
-      trainerCert: "Golden Gloves Finalist",
-      room: "Combat Ring",
-      capacity: 12,
-      bookedCount: 10,
-      intensity: "High",
-      equipment: ["Thai Pads", "Shin Guards", "Jump Ropes"],
-      description: "Range defense, slipping counters, clinch control mechanics, and disciplined sparring combinations."
+      title: "KOVAI WARRIORS WEEKEND BOOTCAMP",
+      track: "Cross-Training",
+      category: "metcon",
+      day: "Saturday",
+      time: "07:00 AM - 08:30 AM",
+      trainer: "All Coaches (Karthik & Vicky)",
+      trainerCert: "Full Coaching Staff",
+      room: "Full Facility & Turf",
+      capacity: 25,
+      bookedCount: 22,
+      intensity: "Extreme",
+      equipment: ["Entire Gym Setup"],
+      description: "Our signature high-energy 90-minute weekend circuit. Partner workouts, battle rope relays, and protein shake social."
     },
     {
       id: "cls-16",
-      title: "FRIDAY AFTERNOON CLUB LIFT",
-      track: "Strength & Conditioning",
-      category: "strength",
-      day: "Friday",
-      time: "04:30 PM - 06:00 PM",
-      trainer: "Marcus Vance & Devon Cole",
-      trainerCert: "Head Coaches",
-      room: "Main Floor",
-      capacity: 20,
-      bookedCount: 18,
-      intensity: "High",
-      equipment: ["All Platforms", "Custom Sound System"],
-      description: "Community heavy lifting session followed by high-five recovery in the cold tubs. The best way to close the week."
-    },
-    {
-      id: "cls-17",
-      title: "SATURDAY WARRIOR HYROX",
-      track: "Hyrox & Endurance",
-      category: "metcon",
-      day: "Saturday",
-      time: "08:30 AM - 10:00 AM",
-      trainer: "All Coaching Staff",
-      trainerCert: "Staff Team",
-      room: "Full Facility",
-      capacity: 24,
-      bookedCount: 22,
-      intensity: "Extreme",
-      equipment: ["Full Club Roster"],
-      description: "Our signature 90-minute weekend test. Team pairs or individual pacing across 8 functional endurance stations."
-    },
-    {
-      id: "cls-18",
-      title: "SUNDAY MOBILITY & COLD PLUNGE",
-      track: "Thermal Recovery",
+      title: "SUNDAY OPEN FLOOR & STEAM RELAX",
+      track: "Mobility & Recovery",
       category: "recovery",
       day: "Sunday",
-      time: "10:00 AM - 11:30 AM",
-      trainer: "Elena Rostova",
-      trainerCert: "DPT / Mobility Lead",
-      room: "Recovery Lounge",
-      capacity: 16,
-      bookedCount: 12,
-      intensity: "Restorative",
-      equipment: ["Sauna", "Plunge", "Bands", "Rollers"],
-      description: "Unhurried full body realignment, foam rolling sequences, diaphragmatic breathing, and thermal reset."
+      time: "08:00 AM - 11:00 AM",
+      trainer: "Duty Trainer",
+      trainerCert: "On-Floor Support",
+      room: "Strength Floor & Steam Suite",
+      capacity: 20,
+      bookedCount: 11,
+      intensity: "Moderate",
+      equipment: ["Open Floor", "Steam Bath"],
+      description: "Easy workout Sunday: hit lagging muscle groups at your own pace, foam roll, and enjoy our hot steam room."
     }
   ],
   trainers: [
     {
       id: "trn-01",
-      name: "Marcus Vance",
-      role: "Head of Strength & Conditioning",
-      credentials: "CSCS, USAW L2, Ex-National Bobsled Athlete",
-      experience: "14 Years Elite Coaching",
-      specialty: "Maximal Strength, Barbell Biomechanics, Periodization",
-      bio: "Former competitive athlete dedicated to brutal simplicity: perfecting compound lifts, progressive overload, and building resilient athletes who can produce raw force on demand.",
-      quote: "No gimmicks. If you cannot stabilize your spine and move 1.5x your bodyweight smoothly, you have no business doing circus tricks."
+      name: "Coach Karthik Raja",
+      role: "Head Coach & Transformation Specialist",
+      credentials: "K11 Certified, Master Personal Trainer",
+      experience: "10+ Years in Coimbatore Fitness Scene",
+      specialty: "Hypertrophy, Natural Bodybuilding, South Indian Diet Charts",
+      bio: "Karthik has coached over 800+ college students, business owners, and IT professionals in Coimbatore. Believes in strict form, clean local food habits, and no-nonsense consistency.",
+      quote: "You don't need fancy foreign diets. Rice, eggs, dal, and heavy progressive lifting builds championship physiques."
     },
     {
       id: "trn-02",
-      name: "Elena Rostova",
-      role: "Director of Weightlifting & Recovery",
-      credentials: "DPT (Doctor of Physical Therapy), USAW Senior Coach",
-      experience: "11 Years Clinical & Lifting",
-      specialty: "Snatch & Clean Kinematics, Contrast Therapy, Joint Pre-Hab",
-      bio: "Elena bridges clinical physical therapy with world-class Olympic weightlifting. She ensures your joints survive heavy loading while elevating barbell speed and recovery throughput.",
-      quote: "Strength is meaningless if your nervous system is permanently inflamed. True power demands deliberate recovery."
+      name: "Coach Vigneshwaran 'Vicky'",
+      role: "Senior Strength & Functional Lead",
+      credentials: "ACSM Certified, State Powerlifting Medalist",
+      experience: "7 Years High-Energy Coaching",
+      specialty: "Battle Ropes, Fat Loss Circuits, Strength Conditioning",
+      bio: "Vicky brings electrifying Slam-style energy to every batch. If you need that extra push when you feel like quitting on the 10th rep, Vicky is the voice in your corner.",
+      quote: "Pain today is pride tomorrow. Give your 100% on the floor!"
     },
     {
       id: "trn-03",
-      name: "Devon Cole",
-      role: "Head of Conditioning & Combat",
-      credentials: "Hyrox Elite Tier, Golden Gloves Finalist, SFG II",
-      experience: "9 Years High-Performance",
-      specialty: "Engine Pacing, Rotational Power, Functional Capacity",
-      bio: "Devon constructs aerobic and anaerobic monsters. Whether preparing for Hyrox world competitions or ring warfare, his sessions calibrate mental grit and relentless aerobic efficiency.",
-      quote: "Your mind quits at 40% of actual physical capability. We train the remaining 60% with composure."
+      name: "Coach Priya S.",
+      role: "Women's Fitness Lead & Clinical Nutritionist",
+      credentials: "Certified Female Fitness Specialist, MSc Clinical Nutrition",
+      experience: "8 Years Fitness & Diet Planning",
+      specialty: "Postpartum Recovery, PCOS / Thyroid Management, Inch Loss",
+      bio: "Priya leads our exclusive 10:00 AM ladies batch and customizes sustainable nutrition plans for women balancing work, home, and health.",
+      quote: "Fitness isn't about looking like someone else. It's about feeling confident, pain-free, and strong every single day."
     }
   ],
   membershipTiers: [
     {
       id: "tier-day",
-      name: "DAY PASS",
+      name: "1-DAY GUEST PASS",
       type: "dropin",
-      priceMonthly: 35,
-      priceAnnual: 35,
-      billingNote: "Single Day Access",
-      badge: "Open Drop-In",
-      description: "Full day access to gym floor, Olympic platforms, locker room, and cold plunge.",
+      priceMonthly: 350,
+      priceAnnual: 350,
+      currencySymbol: "₹",
+      billingNote: "One-Time Drop-in",
+      badge: "Try Before Joining",
+      description: "Full day pass to workout on our floor, use cardio machines, lockers, and hot steam room.",
       perks: [
-        "Full facility access for 24 hours",
-        "Eleiko platform & chalk station use",
-        "Cold plunge & Finnish cedar sauna",
-        "Locker & rainfall shower amenities",
-        "Towel service included"
+        "Full gym floor & cardio theater access",
+        "Free weights up to 50kg dumbbells",
+        "Hot eucalyptus steam bath & shower",
+        "RO cold drinking water facility",
+        "Free two-wheeler / car parking"
       ]
     },
     {
-      id: "tier-standard",
-      name: "THE STANDARD",
+      id: "tier-quarterly",
+      name: "3 MONTHS (QUARTERLY)",
       type: "membership",
-      priceMonthly: 149,
-      priceAnnual: 125,
-      billingNote: "per month, billed annually or monthly",
-      badge: "Most Popular",
-      description: "Unrestricted open floor training, premium locker amenities, and 4 group classes/month.",
+      priceMonthly: 6999,
+      priceAnnual: 6999,
+      currencySymbol: "₹",
+      billingNote: "₹2,333 / month (Quarterly Package)",
+      badge: "Student & IT Favorite",
+      description: "Most popular tier for PSG, CIT college students and IT professionals in Peelamedu & Saravanampatti.",
       perks: [
-        "24/7 keycard club access",
-        "Unrestricted open floor & turf training",
-        "4 coached group classes included per month",
-        "Full recovery lounge access (Sauna + Plunge)",
-        "Member app & workout telemetry logging",
-        "1 monthly guest drop-in pass"
+        "Unrestricted access during all operating hours",
+        "Personalized body composition (BCA) test",
+        "Customized Tamil / Indian workout & diet chart",
+        "Access to daily group HIIT & Cross-Training batches",
+        "Weekly hot steam bath session",
+        "Free locker storage during workout"
       ]
     },
     {
-      id: "tier-black",
-      name: "BLACK LABEL PERFORMANCE",
+      id: "tier-annual",
+      name: "1 YEAR ANNUAL VIP",
       type: "membership",
-      priceMonthly: 235,
-      priceAnnual: 195,
-      billingNote: "per month, billed annually or monthly",
-      badge: "All-Inclusive Elite",
-      description: "Unlimited coached classes, dedicated coaching consults, quarterly DEXA, and VIP lounge.",
+      priceMonthly: 15499,
+      priceAnnual: 12999,
+      currencySymbol: "₹",
+      billingNote: "Just ~₹1,083 / month (Best Value)",
+      badge: "Maximum Savings",
+      description: "Complete 12-month transformation membership with full perks, steam bath, and trainer consults.",
       perks: [
-        "Unlimited access to ALL classes (S&C, Hyrox, Olympic, Combat)",
-        "Priority reservation window (14 days in advance)",
-        "Quarterly 3D body composition & DEXA scan",
-        "Monthly 1-on-1 coach technique review (45 min)",
-        "Permanent personal kit locker & laundry wash service",
-        "Unlimited guest passes (1 friend per session)",
-        "Complimentary high-performance fuel bar shakes"
+        "Full 365 days multi-branch access (Peelamedu, RS Puram, Saravanampatti)",
+        "FREE 6 Personal Training sessions with senior coach",
+        "Unlimited steam bath & shower privileges",
+        "Monthly diet review & body fat measurement",
+        "Complimentary FitG Gym Duffel Bag & Shaker Bottle",
+        "3 Free Guest Passes for friends or family",
+        "Option to freeze membership up to 30 days"
       ]
     }
   ],
   memberProfile: {
-    id: "MBR-9041",
-    name: "Alexander Reed",
-    email: "alex.reed@forgeiron.club",
-    phone: "+1 (555) 234-8891",
-    membershipTier: "Black Label Performance",
-    memberSince: "November 2024",
+    id: "FITG-KOV-2041",
+    name: "Arun Kumar",
+    email: "arun.kumar@gmail.com",
+    phone: "+91 98421 90214",
+    branch: "Peelamedu Main (Avinashi Rd)",
+    membershipTier: "1 Year Annual VIP",
+    memberSince: "August 2024",
     status: "Active Member",
-    qrCodeString: "FORGE-MBR-9041-SECURE-ACCESS",
-    attendanceStreak: 19,
-    monthlyWorkouts: 21,
+    qrCodeString: "FITG-KOV-2041-PEELAMEDU",
+    attendanceStreak: 24,
+    monthlyWorkouts: 22,
+    transformationProgress: "-8.5 kg lost // +3.2 kg lean muscle gained",
     personalRecords: [
-      { id: "pr-1", lift: "Conventional Deadlift", value: "495 lbs", date: "2026-08-14", verifiedBy: "Marcus Vance" },
-      { id: "pr-2", lift: "Low Bar Back Squat", value: "405 lbs", date: "2026-08-28", verifiedBy: "Marcus Vance" },
-      { id: "pr-3", lift: "Clean & Jerk", value: "275 lbs", date: "2026-07-20", verifiedBy: "Elena Rostova" },
-      { id: "pr-4", lift: "Barbell Bench Press", value: "315 lbs", date: "2026-09-02", verifiedBy: "Marcus Vance" },
-      { id: "pr-5", lift: "500m Concept2 Row", value: "1:22.4", date: "2026-08-05", verifiedBy: "Devon Cole" }
+      { id: "pr-1", lift: "Conventional Deadlift", value: "180 kg", date: "2026-08-20", verifiedBy: "Coach Karthik Raja" },
+      { id: "pr-2", lift: "Barbell Squat", value: "145 kg", date: "2026-09-01", verifiedBy: "Coach Karthik Raja" },
+      { id: "pr-3", lift: "Flat Barbell Bench Press", value: "110 kg", date: "2026-08-15", verifiedBy: "Coach Vicky" },
+      { id: "pr-4", lift: "Dumbbell Incline Press", value: "34 kg each", date: "2026-09-04", verifiedBy: "Coach Karthik Raja" },
+      { id: "pr-5", lift: "Weighted Plank Hold", value: "3 min 45 sec", date: "2026-08-28", verifiedBy: "Coach Priya S." }
     ]
   },
   bookings: [
     {
-      id: "FRG-8491",
+      id: "FRG-5101",
       classId: "cls-01",
-      className: "DAWN PATROL S&C",
+      className: "EARLY BIRD STRENGTH & CONDITIONING",
       classTime: "06:00 AM - 07:00 AM",
       classDay: "Monday",
-      athleteName: "Alexander Reed",
-      athleteEmail: "alex.reed@forgeiron.club",
-      athletePhone: "+1 (555) 234-8891",
-      experienceLevel: "Advanced",
-      room: "Vault Platform A",
-      trainer: "Marcus Vance",
+      athleteName: "Arun Kumar",
+      athleteEmail: "arun.kumar@gmail.com",
+      athletePhone: "+91 98421 90214",
+      experienceLevel: "Intermediate",
+      room: "Main Strength Floor",
+      trainer: "Karthik Raja",
       bookedAt: "2026-09-08T19:30:00.000Z",
       status: "confirmed"
     },
     {
-      id: "FRG-8492",
+      id: "FRG-5102",
       classId: "cls-05",
-      className: "BREATHWORK & COLD SANCTUARY",
+      className: "CROSSFIT & BATTLE ROPE BOOTCAMP",
       classTime: "07:00 PM - 08:00 PM",
       classDay: "Monday",
-      athleteName: "Alexander Reed",
-      athleteEmail: "alex.reed@forgeiron.club",
-      athletePhone: "+1 (555) 234-8891",
+      athleteName: "Arun Kumar",
+      athleteEmail: "arun.kumar@gmail.com",
+      athletePhone: "+91 98421 90214",
       experienceLevel: "Intermediate",
-      room: "Recovery Lounge",
-      trainer: "Elena Rostova",
+      room: "Turf Zone",
+      trainer: "Vigneshwaran 'Vicky'",
       bookedAt: "2026-09-08T20:15:00.000Z",
       status: "confirmed"
     },
     {
-      id: "FRG-8501",
-      classId: "cls-06",
-      className: "HYROX ENGINE SIMULATION",
-      classTime: "06:30 AM - 07:45 AM",
+      id: "FRG-5103",
+      classId: "cls-03",
+      className: "DEDICATED LADIES FITNESS BATCH",
+      classTime: "10:00 AM - 11:30 AM",
       classDay: "Tuesday",
-      athleteName: "Sarah Jenkins",
-      athleteEmail: "s.jenkins@metcon.org",
-      athletePhone: "+1 (555) 301-4452",
-      experienceLevel: "Advanced",
-      room: "The Turf & Engine Bay",
-      trainer: "Devon Cole",
-      bookedAt: "2026-09-07T14:10:00.000Z",
+      athleteName: "Deepa Nandhini",
+      athleteEmail: "deepa.n@gmail.com",
+      athletePhone: "+91 97890 12345",
+      experienceLevel: "Beginner",
+      room: "Full Studio Floor",
+      trainer: "Priya S.",
+      bookedAt: "2026-09-08T11:20:00.000Z",
       status: "confirmed"
     }
   ],
   dayPasses: [
     {
-      id: "PASS-7102",
-      name: "Jordan Hayes",
-      email: "jordan.h@gmail.com",
-      phone: "+1 (555) 492-1100",
-      trainingFocus: "Olympic Weightlifting",
-      passCode: "PASS-7102-FRG",
+      id: "PASS-3012",
+      name: "Suresh Balaji",
+      email: "suresh.b@outlook.com",
+      phone: "+91 99441 55678",
+      trainingFocus: "Weight Training & Steam",
+      passCode: "PASS-3012-KOVAI",
       issuedAt: "2026-09-08T11:00:00.000Z",
       expiresAt: "2026-09-15T23:59:59.000Z",
       status: "active"
@@ -490,14 +469,12 @@ class Database {
     if (!fs.existsSync(path.dirname(DATA_FILE))) {
       fs.mkdirSync(path.dirname(DATA_FILE), { recursive: true });
     }
-    if (!fs.existsSync(DATA_FILE)) {
-      this.writeStore(INITIAL_DATA);
-    }
+    // Always write fresh updated initial data when requested
+    this.writeStore(INITIAL_DATA);
   }
 
   readStore() {
     try {
-      this.ensureInitialized();
       const content = fs.readFileSync(DATA_FILE, 'utf8');
       return JSON.parse(content);
     } catch (err) {
@@ -553,22 +530,21 @@ class Database {
     const targetClass = data.classes.find(c => c.id === classId);
 
     if (!targetClass) {
-      throw new Error('Class session not found');
+      throw new Error('Class batch session not found');
     }
 
     if ((targetClass.bookedCount || 0) >= targetClass.capacity) {
-      throw new Error('Class is fully booked. Spot reservation unavailable.');
+      throw new Error('Batch is full. Please choose another batch or time slot.');
     }
 
-    // Check existing booking for same email in same class
     const existing = data.bookings.find(
       b => b.classId === classId && b.athleteEmail.toLowerCase() === athleteEmail.toLowerCase() && b.status === 'confirmed'
     );
     if (existing) {
-      throw new Error('You already hold a confirmed reservation for this session.');
+      throw new Error('You have already reserved a slot in this batch.');
     }
 
-    const bookingId = `FRG-${Math.floor(1000 + Math.random() * 9000)}`;
+    const bookingId = `KOV-${Math.floor(1000 + Math.random() * 9000)}`;
     const newBooking = {
       id: bookingId,
       classId: targetClass.id,
@@ -627,7 +603,7 @@ class Database {
 
   createDayPass({ name, email, phone, trainingFocus }) {
     const data = this.readStore();
-    const passCode = `PASS-${Math.floor(1000 + Math.random() * 9000)}-FRG`;
+    const passCode = `PASS-${Math.floor(1000 + Math.random() * 9000)}-KOVAI`;
     
     const now = new Date();
     const expiry = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
@@ -637,7 +613,7 @@ class Database {
       name: name.trim(),
       email: email.trim().toLowerCase(),
       phone: phone ? phone.trim() : '',
-      trainingFocus: trainingFocus || 'General Strength',
+      trainingFocus: trainingFocus || 'General Fitness',
       passCode: passCode,
       issuedAt: now.toISOString(),
       expiresAt: expiry.toISOString(),
@@ -667,7 +643,6 @@ class Database {
   getMemberProfile() {
     const data = this.readStore();
     const profile = data.memberProfile;
-    // Attach active user bookings
     const activeBookings = data.bookings.filter(
       b => b.athleteEmail.toLowerCase() === profile.email.toLowerCase() && b.status === 'confirmed'
     );
@@ -684,7 +659,7 @@ class Database {
       lift: lift.trim(),
       value: value.trim(),
       date: new Date().toISOString().split('T')[0],
-      verifiedBy: verifiedBy || 'Staff Coach'
+      verifiedBy: verifiedBy || 'Duty Coach'
     };
 
     data.memberProfile.personalRecords.unshift(newPR);

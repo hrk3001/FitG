@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (elements.cardName && elements.cardName.textContent) {
       document.getElementById('athlete-name').value = elements.cardName.textContent;
     }
-    document.getElementById('athlete-email').value = 'alex.reed@forgeiron.club';
+    document.getElementById('athlete-email').value = 'arun.kumar@gmail.com';
 
     openModal(elements.modalBooking);
   }
@@ -394,9 +394,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderMemberships() {
     elements.pricingGrid.innerHTML = state.memberships.map(plan => {
-      const price = state.isAnnualBilling ? plan.priceAnnual : plan.priceMonthly;
-      const isFeatured = plan.id === 'tier-black';
-      const periodLabel = plan.type === 'dropin' ? 'Single Pass' : (state.isAnnualBilling ? '/mo (billed annually)' : '/mo (billed monthly)');
+      const price = state.isAnnualBilling && plan.priceAnnual ? plan.priceAnnual : plan.priceMonthly;
+      const isFeatured = plan.id === 'tier-quarterly' || plan.id === 'tier-annual';
+      const periodLabel = plan.type === 'dropin' ? 'Single Pass' : (plan.id === 'tier-annual' && state.isAnnualBilling ? 'Full Year (Annual Offer)' : (plan.id === 'tier-annual' ? '12 Months VIP' : '3 Months (Quarterly)'));
 
       return `
         <div class="pricing-card ${isFeatured ? 'featured' : ''}">
@@ -406,8 +406,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="plan-header">
               <h3 class="plan-name">${plan.name}</h3>
               <div class="plan-price-wrap">
-                <span class="plan-currency">$</span>
-                <span class="plan-price">${price}</span>
+                <span class="plan-currency">₹</span>
+                <span class="plan-price">${price.toLocaleString('en-IN')}</span>
                 <span class="plan-period">${periodLabel}</span>
               </div>
               <p class="plan-desc">${plan.description}</p>
@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <button class="btn ${isFeatured ? 'btn-primary' : 'btn-secondary'} btn-block btn-select-plan" data-plan-id="${plan.id}">
-            ${plan.type === 'dropin' ? 'Purchase Day Pass' : 'Select Membership'}
+            ${plan.type === 'dropin' ? 'Get 1-Day Trial Pass' : 'Join This Plan'}
           </button>
         </div>
       `;

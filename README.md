@@ -1,22 +1,22 @@
-# FITG // FORGE & IRON ATHLETIC CLUB ⚡
+# FITG FITNESS STUDIO // COIMBATORE ⚡
 
-> **High-Performance Strength, Olympic Lifting & Contrast Recovery Platform**  
-> An uncompromising, full-stack athletic club web application featuring real-time class booking, athlete PR telemetry tracking, digital membership pass generation, and an authentic editorial design crafted to look distinctly human and non-AI.
+> **Kovai's Premier Strength, Transformation & Cross-Training Hub**  
+> An authentic, full-stack gym platform inspired by the high-energy culture of **Slam Fitness** in Coimbatore, Tamil Nadu. Features daily batch booking, exclusive ladies batches, certified K11/ACSM trainers, fee packages in Indian Rupees (₹), member ID cards, and hot eucalyptus steam bath facilities.
 
 ---
 
 ## ⚡ Core Features
 
-- **Live Facility Telemetry**: Real-time floor occupancy gauge tracking active athlete density across platforms and turf.
-- **Weekly Training Schedule**: Filterable timetable (by day and training track: Strength & Conditioning, Hyrox Engine, Olympic Barbell Lab, Combat Striking, Contrast Recovery).
-- **Interactive Spot Reservation**: Native `<dialog>` modal booking flow with duplicate prevention, capacity enforcement, and instant booking code generation (`FRG-XXXX`).
-- **Athlete Locker Room & Digital Pass**:
+- **Coimbatore Branches**: Multi-hub coverage across Peelamedu (Avinashi Road), RS Puram (DB Road), and Saravanampatti (IT Corridor).
+- **Daily Batch Timetable**: Morning, evening, and dedicated 10:00 AM exclusive ladies batches.
+- **Interactive Slot Reservation**: Native `<dialog>` modal booking flow with duplicate prevention, mobile verification, and booking codes (`KOV-XXXX`).
+- **Member Locker Room & Digital Pass**:
   - Digital member RFID card with barcode/QR identifier.
-  - Personal Record (PR) telemetry vault for compound lifts (Squat, Deadlift, Clean & Jerk, RowErg) with instant backend logging.
-  - Active reservation ledger with one-click cancellation to release platform spots.
-- **Guest Trial Pass Engine**: 24-hour drop-in pass generator issuing unique verification codes (`PASS-XXXX-FRG`).
-- **Staff Operations Desk**: Slide-out administrator drawer for staff check-ins, booking ledger voiding, and telemetry audits.
-- **Human-Crafted Aesthetic**: Industrial basalt charcoal (`#090a0c`), high-contrast electric volt lime (`#d4ff00`), architectural concrete typography, and authentic athletic photography. Zero AI clichés.
+  - Personal Record (PR) vault tracking compound lifts (Squats, Deadlifts, Bench in KG).
+  - Active reservation ledger with one-click slot release.
+- **1-Day Guest Trial Pass Engine**: Instant guest passes with verification codes (`PASS-XXXX-KOVAI`).
+- **Staff Reception Desk**: Slide-out administrator drawer for staff check-ins, floor occupancy tracking, and trial pass verification.
+- **Authentic Local Aesthetic**: Slam-inspired bold yellow and matte black palette, genuine Coimbatore fitness studio imagery, Tamil motivational wall graphics, zero AI clichés.
 
 ---
 

@@ -16,10 +16,10 @@
   --border-medium: rgba(255, 255, 255, 0.14);
   --border-strong: rgba(255, 255, 255, 0.28);
   
-  --accent-volt: #d4ff00;
-  --accent-volt-hover: #b8e200;
-  --accent-volt-dim: rgba(212, 255, 0, 0.12);
-  --accent-volt-glow: rgba(212, 255, 0, 0.25);
+  --accent-volt: #ffd000;
+  --accent-volt-hover: #e6bc00;
+  --accent-volt-dim: rgba(255, 208, 0, 0.14);
+  --accent-volt-glow: rgba(255, 208, 0, 0.3);
   
   --accent-orange: #ff5500;
   --accent-orange-dim: rgba(255, 85, 0, 0.12);
