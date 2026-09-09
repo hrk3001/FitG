@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORGE & IRON ATHLETIC CLUB | Elite Strength, Olympic Lifting & Contrast Recovery</title>
+  <meta name="description" content="14,000 sq. ft. of Eleiko competition platforms, Rogue rigs, Woodway slat-belts, and contrast cold plunges in the industrial corridor. No gimmicks. Real performance.">
+  <meta name="keywords" content="gym, athletic club, strength and conditioning, olympic lifting, cold plunge, sauna, hyrox, boxing">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="FORGE & IRON ATHLETIC CLUB">
+  <meta property="og:description" content="High-Performance Strength, Olympic Lifting & Contrast Recovery.">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Telemetry Ticker -->
+  <div class="telemetry-ticker">
+    <div class="container ticker-inner">
+      <div class="ticker-item">
+        <span class="pulse-dot"></span>
+        <span id="ticker-occupancy">FLOOR OCCUPANCY: 46 / 65 ATHLETES (OPTIMAL FLOW)</span>
+      </div>
+      <div class="ticker-item">
+        <span>COLD PLUNGE: 38.2°F</span>
+        <span style="color: var(--border-strong);">|</span>
+        <span>FINNISH SAUNA: 195.4°F</span>
+        <span style="color: var(--border-strong);">|</span>
+        <span style="color: var(--accent-volt);">NEXT: DAWN PATROL S&C (06:00)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo" aria-label="Forge and Iron Athletic Club">
+        <span class="logo-main">FORGE <span class="logo-accent">&</span> IRON</span>
+        <span class="logo-sub">ATHLETIC CLUB // EST. 2021</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#schedule" class="nav-link">Timetable</a></li>
+          <li><a href="#facility" class="nav-link">Facility</a></li>
+          <li><a href="#memberships" class="nav-link">Memberships</a></li>
+          <li><a href="#coaches" class="nav-link">Coaches</a></li>
+          <li><a href="#locker-room" class="nav-link">Member Portal</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="btn-open-daypass" class="btn btn-primary btn-sm">Claim Day Pass</button>
+        <button id="btn-toggle-staff" class="btn btn-admin btn-sm">Staff Ops</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="assets/images/hero-floor.jpg" alt="Forge & Iron athletic gym floor with Eleiko barbells and industrial lighting" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-tagline-badge">
+        <span>⚡ High-Performance Strength & Conditioning</span>
+      </div>
+      <h1 class="hero-title">
+        RAW FORCE.<br>
+        <span class="strike">UNCOMPROMISING</span> STANDARDS.
+      </h1>
+      <p class="hero-desc">
+        No influencer gimmicks. No neon cardio nightclub distractions. 14,000 sq. ft. of Eleiko competition platforms, custom Rogue rigs, Woodway slat-belt treadmills, and clinical 38°F contrast recovery.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#schedule" class="btn btn-primary">Reserve Class Spot</a>
+        <a href="#facility" class="btn btn-secondary">Explore The Yard</a>
+      </div>
+
+      <div class="hero-stats-strip">
+        <div class="stat-item">
+          <span class="stat-number">14</span>
+          <span class="stat-label">Olympic Platforms</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">38°F</span>
+          <span class="stat-label">Chilled Cold Plunge</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">195°F</span>
+          <span class="stat-label">Finnish Cedar Sauna</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">06:00</span>
+          <span class="stat-label">Dawn Patrol Lift</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main>
+
+    <!-- Schedule / Timetable Section -->
+    <section id="schedule" class="section">
+      <div class="container">
+        
+        <!-- Live Floor Occupancy Card -->
+        <div class="occupancy-card">
+          <div class="occupancy-details">
+            <span class="section-eyebrow">Real-Time Facility Telemetry</span>
+            <h4>Active Floor Utilization</h4>
+            <p id="occupancy-desc">46 Athletes currently lifting on platforms & turf. Flow is smooth; racks open.</p>
+          </div>
+          <div class="occupancy-gauge">
+            <div class="gauge-metrics">
+              <span id="gauge-numbers">46 / 65 CAPACITY</span>
+              <span id="gauge-percent" style="color: var(--accent-volt); font-weight: 700;">71%</span>
+            </div>
+            <div class="gauge-track">
+              <div id="gauge-bar-fill" class="gauge-fill" style="width: 71%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">Weekly Training Grid</span>
+            <h2 class="section-title">Class Schedule & Booking</h2>
+            <p class="section-subtitle">
+              Capped small-group sessions. Strict coach-to-athlete ratios. Lock in your platform or turf spot below.
+            </p>
+          </div>
+        </div>
+
+        <!-- Schedule Filter Controls -->
+        <div class="schedule-controls">
+          <div class="day-filters" id="day-filters" role="tablist">
+            <button class="day-btn active" data-day="all">ALL DAYS</button>
+            <button class="day-btn" data-day="Monday">MON</button>
+            <button class="day-btn" data-day="Tuesday">TUE</button>
+            <button class="day-btn" data-day="Wednesday">WED</button>
+            <button class="day-btn" data-day="Thursday">THU</button>
+            <button class="day-btn" data-day="Friday">FRI</button>
+            <button class="day-btn" data-day="Saturday">SAT</button>
+            <button class="day-btn" data-day="Sunday">SUN</button>
+          </div>
+
+          <div class="category-filters" id="category-filters">
+            <span class="category-label">TRACK:</span>
+            <button class="cat-pill active" data-category="all">All Tracks</button>
+            <button class="cat-pill" data-category="strength">Strength & Conditioning</button>
+            <button class="cat-pill" data-category="metcon">Engine / Hyrox</button>
+            <button class="cat-pill" data-category="olympic">Olympic Weightlifting</button>
+            <button class="cat-pill" data-category="combat">Combat Conditioning</button>
+            <button class="cat-pill" data-category="recovery">Contrast Recovery</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Classes Grid -->
+        <div class="classes-grid" id="classes-grid">
+          <!-- Populated by JavaScript via /api/classes -->
+          <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+            Loading live training schedule...
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Facility & Architecture Showcase -->
+    <section id="facility" class="section" style="background: #0b0d10;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">The Infrastructure</span>
+            <h2 class="section-title">Built For Brutal Durability</h2>
+            <p class="section-subtitle">
+              Every bar, rack, dumbbell, and recovery tank is commercial-grade, competition-certified hardware.
+            </p>
+          </div>
+        </div>
+
+        <div class="facility-grid">
+          
+          <!-- Zone 1: The Vault -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/images/hero-floor.jpg" alt="Olympic weightlifting platforms with Eleiko barbells" loading="lazy">
+              <span class="facility-badge">Zone 01 // The Vault</span>
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Barbell Platforms & Racks</h3>
+              <p class="facility-desc">
+                14 dedicated rubber impact drop platforms equipped with IWF Eleiko competition bars, calibrated cast iron plates, and custom Rogue Monster Rigs with pin pipes.
+              </p>
+              <ul class="facility-specs">
+                <li>Eleiko 20kg & 15kg IWF Training & Comp Bars</li>
+                <li>Chalk stations on every single lifting station</li>
+                <li>Specialty safety squat, trap bars & cambered bars</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Zone 2: The Turf & Engine -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/images/turf-sprint.jpg" alt="Indoor athletic turf track with heavy push sled" loading="lazy">
+              <span class="facility-badge">Zone 02 // The Turf</span>
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Engine Bay & 50m Turf</h3>
+              <p class="facility-desc">
+                High-friction athletic sprint turf built for heavy sled drives, Hyrox race simulations, kettlebell circuits, and battery conditioning.
+              </p>
+              <ul class="facility-specs">
+                <li>Heavy steel push/pull sleds & plate loaders</li>
+                <li>6x Concept2 RowErg, SkiErg & BikeErg stations</li>
+                <li>Full dumbbell run from 5 lbs up to 150 lbs</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Zone 3: Contrast Sanctuary -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/images/recovery-plunge.jpg" alt="Cold plunge ice bath and Finnish cedar dry sauna" loading="lazy">
+              <span class="facility-badge">Zone 03 // Sanctuary</span>
+            </div>
+            <div class="facility-body">
+              <h3 class="facility-title">Contrast Recovery Suite</h3>
+              <p class="facility-desc">
+                Dedicated thermal shock facility. Reset systemic fatigue, flush inflammation, and down-regulate your autonomic nervous system.
+              </p>
+              <ul class="facility-specs">
+                <li>Dual stainless 38°F chilled filtered cold plunges</li>
+                <li>195°F Finnish dry cedar heat sauna with ambient light</li>
+                <li>Malin+Goetz rainfall showers & private lockers</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Tiers Section -->
+    <section id="memberships" class="section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; justify-content: center; flex-direction: column; align-items: center;">
+          <span class="section-eyebrow">Transparent Access</span>
+          <h2 class="section-title">Membership Tiers</h2>
+          <p class="section-subtitle" style="text-align: center;">
+            No hidden maintenance fees. No 30-day cancellation traps. Real athletic club membership with honest pricing.
+          </p>
+
+          <!-- Annual vs Monthly Switch -->
+          <div class="billing-toggle-wrap" style="margin-top: 24px;">
+            <span class="toggle-label" id="label-monthly" style="color: #ffffff; font-weight: 700;">Monthly</span>
+            <div class="toggle-switch" id="billing-toggle" role="switch" aria-checked="false" tabindex="0">
+              <div class="toggle-thumb"></div>
+            </div>
+            <span class="toggle-label" id="label-annual">Annual</span>
+            <span class="discount-tag">Save ~20%</span>
+          </div>
+        </div>
+
+        <div class="pricing-grid" id="pricing-grid">
+          <!-- Populated by JavaScript via /api/memberships -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section id="coaches" class="section" style="background: #0c0e12;">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">Instruction & Pedigree</span>
+            <h2 class="section-title">Performance Directors</h2>
+            <p class="section-subtitle">
+              Real credentials, decades of competitive weight room mastery, zero commercial fitness nonsense.
+            </p>
+          </div>
+        </div>
+
+        <div class="coaches-grid" id="coaches-grid">
+          <!-- Populated by JavaScript via /api/trainers -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Member Locker Room Portal Section -->
+    <section id="locker-room" class="section member-portal-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">Athlete Dashboard</span>
+            <h2 class="section-title">Member Locker Room</h2>
+            <p class="section-subtitle">
+              Your digital club pass, personal record telemetry vault, and active class reservations.
+            </p>
+          </div>
+          <button id="btn-log-pr-modal" class="btn btn-secondary btn-sm">+ Log New PR</button>
+        </div>
+
+        <div class="member-dashboard-layout">
+          
+          <!-- Left: Digital Access Card -->
+          <div class="digital-pass-card">
+            <div class="pass-header">
+              <div>
+                <div class="pass-tier" id="card-tier">Black Label Performance</div>
+                <div class="pass-athlete-name" id="card-name">Alexander Reed</div>
+                <div class="pass-id" id="card-id">ID: MBR-9041</div>
+              </div>
+              <span class="pass-status-pill" id="card-status">ACTIVE</span>
+            </div>
+
+            <div class="pass-chip"></div>
+
+            <div class="pass-barcode-wrap">
+              <svg class="barcode-svg" viewBox="0 0 240 50" fill="#000000">
+                <rect x="0" y="0" width="4" height="50"/>
+                <rect x="8" y="0" width="2" height="50"/>
+                <rect x="14" y="0" width="6" height="50"/>
+                <rect x="24" y="0" width="3" height="50"/>
+                <rect x="32" y="0" width="8" height="50"/>
+                <rect x="44" y="0" width="3" height="50"/>
+                <rect x="52" y="0" width="2" height="50"/>
+                <rect x="58" y="0" width="7" height="50"/>
+                <rect x="70" y="0" width="4" height="50"/>
+                <rect x="78" y="0" width="2" height="50"/>
+                <rect x="84" y="0" width="5" height="50"/>
+                <rect x="94" y="0" width="8" height="50"/>
+                <rect x="106" y="0" width="3" height="50"/>
+                <rect x="114" y="0" width="6" height="50"/>
+                <rect x="124" y="0" width="2" height="50"/>
+                <rect x="130" y="0" width="8" height="50"/>
+                <rect x="142" y="0" width="4" height="50"/>
+                <rect x="150" y="0" width="3" height="50"/>
+                <rect x="158" y="0" width="6" height="50"/>
+                <rect x="168" y="0" width="2" height="50"/>
+                <rect x="174" y="0" width="8" height="50"/>
+                <rect x="186" y="0" width="4" height="50"/>
+                <rect x="194" y="0" width="2" height="50"/>
+                <rect x="200" y="0" width="7" height="50"/>
+                <rect x="212" y="0" width="4" height="50"/>
+                <rect x="220" y="0" width="2" height="50"/>
+                <rect x="226" y="0" width="6" height="50"/>
+                <rect x="236" y="0" width="4" height="50"/>
+              </svg>
+              <span class="barcode-label" id="card-barcode-label">FORGE-MBR-9041-SECURE</span>
+            </div>
+
+            <div class="pass-footer-meta">
+              <span>Member Since: <strong id="card-since">Nov 2024</strong></span>
+              <span>Streak: <strong id="card-streak" style="color: var(--accent-volt);">19 Days</strong></span>
+            </div>
+          </div>
+
+          <!-- Right: PR Telemetry & Active Bookings -->
+          <div class="portal-main-panel">
+            
+            <!-- PR Vault -->
+            <div class="portal-block">
+              <div class="block-header">
+                <h3 class="block-title">
+                  <span>⚡ Personal Records (PR Vault)</span>
+                </h3>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">Platform Verified</span>
+              </div>
+              <div class="prs-grid" id="prs-grid">
+                <!-- PR items inserted dynamically -->
+              </div>
+            </div>
+
+            <!-- Active Reservations -->
+            <div class="portal-block">
+              <div class="block-header">
+                <h3 class="block-title">
+                  <span>📅 My Booked Sessions</span>
+                </h3>
+                <span id="active-booking-count" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-volt);">2 Sessions Confirmed</span>
+              </div>
+              <div class="booked-sessions-list" id="booked-sessions-list">
+                <!-- Bookings inserted dynamically -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Staff Operations Drawer -->
+  <aside class="staff-drawer" id="staff-drawer" aria-label="Staff Operations Management Drawer">
+    <div class="drawer-header">
+      <div>
+        <h4 style="font-family: var(--font-display); font-size: 1.6rem; text-transform: uppercase;">Staff Operations Desk</h4>
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #ff7733;">SYSTEM OPERATOR MODE</span>
+      </div>
+      <button id="btn-close-staff" class="modal-close-btn" aria-label="Close Staff Drawer">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div style="background: rgba(255,85,0,0.08); border: 1px solid rgba(255,85,0,0.25); padding: 16px; border-radius: var(--radius-xs); margin-bottom: 24px;">
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #ff8844; font-weight: 700;">LIVE DESK TELEMETRY</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-family: var(--font-mono); font-size: 0.8rem;">
+          <div>Confirmed Bookings: <strong id="admin-total-bookings" style="color:#ffffff;">0</strong></div>
+          <div>Guest Day Passes: <strong id="admin-total-passes" style="color:#ffffff;">0</strong></div>
+          <div>Capacity Utilization: <strong id="admin-utilization" style="color: var(--accent-volt);">0%</strong></div>
+          <div>Floor Count: <strong id="admin-floor-count" style="color:#ffffff;">46 / 65</strong></div>
+        </div>
+      </div>
+
+      <h5 style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 12px; color: var(--text-primary);">
+        Live Class Bookings Ledger
+      </h5>
+      <div style="overflow-x: auto; margin-bottom: 30px;">
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Athlete</th>
+              <th>Class</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="ledger-tbody">
+            <!-- Bookings dynamically listed here -->
+          </tbody>
+        </table>
+      </div>
+
+      <h5 style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 12px; color: var(--text-primary);">
+        Active Guest Day Passes
+      </h5>
+      <div style="overflow-x: auto;">
+        <table class="ledger-table">
+          <thead>
+            <tr>
+              <th>Pass Code</th>
+              <th>Name</th>
+              <th>Issued</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="passes-tbody">
+            <!-- Passes dynamically listed here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Modal 1: Booking Form -->
+  <dialog id="modal-booking">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow" id="modal-booking-eyebrow">Spot Reservation</span>
+        <h3 class="modal-title" id="modal-booking-class-name">Class Title</h3>
+      </div>
+      <button class="modal-close-btn" data-close-dialog="modal-booking">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="form-booking">
+        <input type="hidden" id="booking-class-id" name="classId">
+        
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-hairline); padding: 12px 16px; border-radius: var(--radius-xs); margin-bottom: 20px; font-family: var(--font-mono); font-size: 0.78rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+            <span style="color: var(--text-muted);">TIME:</span>
+            <span id="booking-class-time" style="color: var(--accent-volt); font-weight: 700;">06:00 AM</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+            <span style="color: var(--text-muted);">COACH:</span>
+            <span id="booking-class-coach" style="color: #ffffff;">Marcus Vance</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--text-muted);">ROOM:</span>
+            <span id="booking-class-room" style="color: #ffffff;">Vault Platform A</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="athlete-name" class="form-label">Athlete Full Name *</label>
+          <input type="text" id="athlete-name" class="form-control" placeholder="e.g. Alexander Reed" required>
+        </div>
+
+        <div class="form-group">
+          <label for="athlete-email" class="form-label">Email Address *</label>
+          <input type="email" id="athlete-email" class="form-control" placeholder="alexander@domain.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="athlete-phone" class="form-label">Phone Number</label>
+            <input type="tel" id="athlete-phone" class="form-control" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="athlete-exp" class="form-label">Experience Level</label>
+            <select id="athlete-exp" class="form-control">
+              <option value="Intermediate">Intermediate Lifter</option>
+              <option value="Advanced">Advanced / Competitor</option>
+              <option value="Beginner">New to Barbell / Functional</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
+          Confirm Spot Reservation
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Modal 2: Booking Confirmation Receipt -->
+  <dialog id="modal-confirmed">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow" style="color: var(--accent-volt);">Spot Confirmed</span>
+        <h3 class="modal-title">You're On The Roster</h3>
+      </div>
+      <button class="modal-close-btn" data-close-dialog="modal-confirmed">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="ticket-receipt">
+        <div class="receipt-header">
+          <span>FORGE & IRON ATHLETIC CLUB</span>
+          <span>OFFICIAL TICKET</span>
+        </div>
+        <div class="receipt-item">
+          <span class="label">ATHLETE:</span>
+          <strong id="receipt-athlete">Alexander Reed</strong>
+        </div>
+        <div class="receipt-item">
+          <span class="label">CLASS:</span>
+          <strong id="receipt-class">DAWN PATROL S&C</strong>
+        </div>
+        <div class="receipt-item">
+          <span class="label">SCHEDULE:</span>
+          <strong id="receipt-schedule">Monday @ 06:00 AM</strong>
+        </div>
+        <div class="receipt-item">
+          <span class="label">LOCATION:</span>
+          <strong id="receipt-room">Vault Platform A</strong>
+        </div>
+        <div class="receipt-code" id="receipt-booking-id">
+          FRG-8491
+        </div>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
+        A confirmation pass has been saved to your account. Please arrive 10 minutes before start time. Clean lifting shoes and chalk towel recommended.
+      </p>
+
+      <button type="button" class="btn btn-primary btn-block" data-close-dialog="modal-confirmed">
+        Done & Return
+      </button>
+    </div>
+  </dialog>
+
+  <!-- Modal 3: Free Day Pass Claim -->
+  <dialog id="modal-daypass">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow">Guest Privileges</span>
+        <h3 class="modal-title">Claim 1-Day Trial Pass</h3>
+      </div>
+      <button class="modal-close-btn" data-close-dialog="modal-daypass">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="form-daypass">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5;">
+          Experience our full 14,000 sq. ft. weight room floor, Eleiko lifting platforms, and 38°F contrast recovery plunge for 24 hours.
+        </p>
+
+        <div class="form-group">
+          <label for="pass-name" class="form-label">Full Name *</label>
+          <input type="text" id="pass-name" class="form-control" placeholder="Jordan Hayes" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pass-email" class="form-label">Email Address *</label>
+          <input type="email" id="pass-email" class="form-control" placeholder="jordan@gmail.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pass-phone" class="form-label">Phone Number</label>
+            <input type="tel" id="pass-phone" class="form-control" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label for="pass-focus" class="form-label">Primary Focus</label>
+            <select id="pass-focus" class="form-control">
+              <option value="Olympic Weightlifting">Olympic Weightlifting</option>
+              <option value="Compound Powerlifting">Heavy Powerlifting</option>
+              <option value="Hyrox / Functional Engine">Hyrox / Functional Engine</option>
+              <option value="Contrast Plunge & Sauna">Thermal Plunge & Recovery</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
+          Issue Digital Guest Pass
+        </button>
+      </form>
+
+      <!-- Pass Generated Success Container -->
+      <div id="daypass-success" style="display: none; margin-top: 20px;">
+        <div class="ticket-receipt">
+          <div class="receipt-header">
+            <span>24-HOUR GUEST ADMISSION</span>
+            <span style="color: var(--accent-cyan);">ACTIVE PASS</span>
+          </div>
+          <div class="receipt-item">
+            <span class="label">ISSUED TO:</span>
+            <strong id="success-pass-name">Jordan Hayes</strong>
+          </div>
+          <div class="receipt-item">
+            <span class="label">VALID UNTIL:</span>
+            <strong id="success-pass-expiry">7 Days from today</strong>
+          </div>
+          <div class="receipt-code" id="success-pass-code">
+            PASS-8921-FRG
+          </div>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-align: center;">
+          Show this code at the reception desk for instant badge wristband issue.
+        </p>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- Modal 4: Log Personal Record (PR) -->
+  <dialog id="modal-pr">
+    <div class="modal-header">
+      <div>
+        <span class="section-eyebrow">Telemetry Vault</span>
+        <h3 class="modal-title">Log Personal Record</h3>
+      </div>
+      <button class="modal-close-btn" data-close-dialog="modal-pr">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="form-pr">
+        <div class="form-group">
+          <label for="pr-lift" class="form-label">Discipline / Lift *</label>
+          <input type="text" id="pr-lift" class="form-control" placeholder="e.g. Front Squat, Strict Overhead Press, 1000m SkiErg" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pr-value" class="form-label">Weight or Time Recorded *</label>
+          <input type="text" id="pr-value" class="form-control" placeholder="e.g. 365 lbs or 3:12.5" required>
+        </div>
+
+        <div class="form-group">
+          <label for="pr-coach" class="form-label">Witnessing Coach / Staff</label>
+          <select id="pr-coach" class="form-control">
+            <option value="Marcus Vance">Marcus Vance (Head S&C)</option>
+            <option value="Elena Rostova">Elena Rostova (USAW Senior)</option>
+            <option value="Devon Cole">Devon Cole (Hyrox Pro)</option>
+            <option value="Self-Attested Platform PR">Self-Attested Platform PR</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
+          Record PR Into Ledger
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-main" style="font-size: 1.8rem;">FORGE <span class="logo-accent">&</span> IRON</span>
+          <span class="logo-sub">ATHLETIC CLUB // EST. 2021</span>
+          <p>
+            An uncompromising training facility designed for competitive lifters, hybrid endurance athletes, and serious practitioners of physical culture.
+          </p>
+          <div style="margin-top: 16px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+            840 Industrial Parkway, Warehouse District, Bldg 4<br>
+            Phone: +1 (555) 840-3674
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Club Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#schedule">Live Timetable</a></li>
+            <li><a href="#facility">Equipment Inventory</a></li>
+            <li><a href="#memberships">Membership Tiers</a></li>
+            <li><a href="#coaches">Staff Roster</a></li>
+            <li><a href="#locker-room">Athlete Locker Room</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Club Hours</h4>
+          <ul class="footer-links" style="font-family: var(--font-mono); font-size: 0.8rem;">
+            <li>MON – FRI: 05:00 – 22:00</li>
+            <li>SATURDAY: 06:30 – 20:00</li>
+            <li>SUNDAY: 08:00 – 18:00</li>
+            <li>MEMBERS: 24/7 RFID ACCESS</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Weight Room Rules</h4>
+          <ul class="footer-links" style="font-size: 0.8rem;">
+            <li>1. Chalk is encouraged & provided.</li>
+            <li>2. Calibrated bumper drops permitted.</li>
+            <li>3. Strip bars and re-rack plates.</li>
+            <li>4. Clean footwear on lifting platforms.</li>
+            <li>5. Shower before cold plunge entry.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 FORGE & IRON ATHLETIC CLUB. ALL RIGHTS RESERVED.
+        </div>
+        <div>
+          <span>PROUDLY EQUIPPED WITH ELEIKO & ROGUE FITNESS HARDWARE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Frontend Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
